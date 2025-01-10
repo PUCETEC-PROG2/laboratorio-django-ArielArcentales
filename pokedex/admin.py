@@ -10,5 +10,5 @@ class PokemonAdmin(admin.ModelAdmin):
 
 @admin.register(Trainer)
 
-class TRainerAdmin(admin.ModelAdmin):
+class TrainerAdmin(admin.ModelAdmin):
     pass

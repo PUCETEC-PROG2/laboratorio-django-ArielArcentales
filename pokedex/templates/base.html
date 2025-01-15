@@ -12,13 +12,25 @@
         <div class="bg-primary text-white p-4 text-center">
             <img src="{% static "pokemon-logo.png" %}" alt="Pokemon Logo" style="max-width: 100%; height: auto; width: 600px;">
         </div>
-        {% if user.is_authenticated %}
-        <a href="{% url "logout" %}"> Salir </a>
-        {% else %}
-        <a href="{% url "pokedex:login" %}"> Ingresar </a>
-        {% endif %}
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Pokemons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "pokedex:trainers" %}">Entrenadores</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "logout" %}">Salir</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "pokedex:login" %}">Ingresar</a>
+            </li>
+            {% endif %}
+          </ul>
         {% block content %}{% endblock content %}
     </div>
 </body>
 
-</html>
+</html> 

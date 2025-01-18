@@ -14,7 +14,16 @@ Por otra parte se aplica el uso de Modelos en Django y uso de bases de datos rel
 2. Generación de migraciones.
 3. Despliegue de Pokemones en Templates lista y detalle
 4. Despliegue de Entrenadores en Templates lista y detalle
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_de_tu_base_de_datos',
+        'USER': 'tu_usuario',
+        'PASSWORD': 'tu_contraseña',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 ## Instalación del ambiente
 
 ### Requerimientos
